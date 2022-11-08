@@ -1,0 +1,40 @@
+body {
+  background-color: salmon;
+  color: midnightblue;
+}
+
+header {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Only targeting images within header element */
+header > img {
+  border-radius: 100%;
+  border: 1px solid;
+}
+
+ul {
+  /* Override HTML default styles */
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+ul > li {
+  background-color: #fff;
+  border-radius: 4em;
+  padding: 1em;
+  margin: 0.5em auto;
+  box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+ul > li > a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: monospace;
+}
