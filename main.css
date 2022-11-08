@@ -1,40 +1,128 @@
+/* Base Layout */
+* {
+  /* Override HTML default styles */
+  box-sizing: border-box;
+  margin: 0;
+}
 body {
-  background-color: salmon;
-  color: midnightblue;
+  background-color: rgb(5, 120, 208);
+  color: #000;
+  font-size: 16px;
 }
 
 header {
-  margin-top: 5em;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 40rem;
+  margin: 5rem auto;
 }
+
+/* Asterisk allows us to target all children */
+/* header > * {
+  padding-bottom: 1rem;
+} */
 
 /* Only targeting images within header element */
 header > img {
-  border-radius: 100%;
-  border: 1px solid;
+  max-width: 8rem;
+  border-radius: 25%;
+  margin-bottom: 1rem;
+  mix-blend-mode: plus-lighter;
 }
 
 ul {
-  /* Override HTML default styles */
-  box-sizing: border-box;
   list-style: none;
   margin: 0 auto;
-  padding: 2em;
+  padding: 0 2rem;
 }
 
 ul > li {
   background-color: #fff;
-  border-radius: 4em;
-  padding: 1em;
-  margin: 0.5em auto;
-  box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  padding: 3rem;
+  margin: 1em auto;
+  box-shadow: inset 0px -12px 2em 0px rgb(0 93 255 / 48%);
   text-align: center;
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding-bottom: 1rem;
+}
+
+h6 {
+  padding-bottom: 0.33rem;
+}
+
+/* .testimonials {
+  max-width: 140rem;
+  margin: 10rem auto;
+  padding: 2rem;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+/* Media query to reset to single column below 700px*/
+/* @media (max-width: 1130px) {
+  .testimonials {
+    grid-template-columns: 1fr 1fr;
+  } */
+
+/* Typography */
+
+/* Install Google Font */
+@font-face {
+  font-family: "Xanh";
+  src: url(./fonts/XanhMono-Regular.ttf);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ul > li > a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-family: monospace;
 }
+
+h1,
+a {
+  font-size: 3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Xanh", monospace;
+  font-weight: 100;
+}
+
+p {
+  font-size: 0.825rem;
+}
+
+h6 {
+  text-transform: uppercase;
+  text-align: center;
+}
+/* 
+.fade {
+  opacity: 70%;
+} */
